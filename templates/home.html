@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card-deck">
+   <div class="card">
+      <div class="card-body text-center">
+        <img src="{{ url_for('static', filename= '../static/images/emergency.jpg') }}" id="plot"  width="500">
+        <p>Mammals/Birds/Reptiles/Amphibians/Fishes/Insects/Molluscs/Other_invertebrates</p>
+      </div>
+  </div>
+   <div class="card">
+      <div class="card-body text-center">
+          <p>The bar chart above illustrates the rate of change in animal species endangered each year. It is because mammals and birds are so common and easy to find in the world that people pay most of their attention to them. Currently, there are many campaigns to protect mammals and birds, but the number of molluscs species that are endangered is alarming. Each year, there are around 32 species of molluscs being in danger due to illegal mass fishing and water pollution. Water pollution is also a main reason why there are more than 27 different species of fishes being endangered. Any loss is alarming but please consider our plotted bar chart to make your own priority. Reptiles and insects are considerable as well because their endangered species increase by more than 21 species every year.</p>
+      </div>
+  </div>
+</div>
+
+<div class="card-deck">
+   <div class="card">
+      <div class="card-body text-center">
+        <img src="{{ url_for('static', filename= '../static/images/mammals.jpg') }}" id="plot"  width="500">
+        {%for p in post%}
+            <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+        {%endfor%}
+      </div>
+  </div>
+   <div class="card">
+      <div class="card-body text-center">
+          <img src="{{ url_for('static', filename= '../static/images/birds.jpg') }}" id="plot"  width="500">
+          {%for p in post%}
+          <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+      {%endfor%}
+      </div>
+  </div>
+</div>
+
+
+<div class="card-deck">
+   <div class="card">
+      <div class="card-body text-center">
+        <img src="{{ url_for('static', filename= '../static/images/reptiles.jpg') }}" id="plot" width="500">
+        {%for p in post%}
+        <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+    {%endfor%}
+      </div>
+  </div>
+   <div class="card">
+      <div class="card-body text-center">
+         <img src="{{ url_for('static', filename= '../static/images/amphibians.jpg') }}" id="plot"  width="500">
+         {%for p in post%}
+         <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+     {%endfor%}
+      </div>
+  </div>
+
+</div>
+
+<div class="card-deck">
+   <div class="card">
+      <div class="card-body text-center">
+        <img src="{{ url_for('static', filename= '../static/images/fishes.jpg') }}" id="plot"  width="500">
+        {%for p in post%}
+        <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+    {%endfor%}
+      </div>
+  </div>
+   <div class="card">
+      <div class="card-body text-center">
+         <img src="{{ url_for('static', filename= '../static/images/insects.jpg') }}" id="plot"  width="500">
+         {%for p in post%}
+         <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+     {%endfor%}
+      </div>
+  </div>
+
+</div>
+
+<div class="card-deck">
+   <div class="card">
+      <div class="card-body text-center">
+        <img src="{{ url_for('static', filename= '../static/images/molluscs.jpg') }}" id="plot"  width="500">
+        {%for p in post%}
+        <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+    {%endfor%}
+      </div>
+  </div>
+   <div class="card">
+      <div class="card-body text-center">
+         <img src="{{ url_for('static', filename= '../static/images/other_invertebrates.jpg') }}" id="plot"  width="500">
+         {%for p in post%}
+         <p>In year {{p[0]}}, there are {{p[1]}} endangered species</p>
+     {%endfor%}
+      </div>
+  </div>
+</div>
+
+{% endblock content %}
